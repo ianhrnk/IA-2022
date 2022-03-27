@@ -19,4 +19,3 @@ def BFS(initial_state, final_state):
             if not next_move.board in visited_states:
                 visited_states.append(next_move.board)
                 queue.put(next_move)
-
