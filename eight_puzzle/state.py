@@ -3,10 +3,10 @@ from helper import swap_elements, is_impossible_state
 
 
 class State:
-    def __init__(self, board, come_from):
+    def __init__(self, board, previous_state):
         self.board = board
         if board is not None:
-            self.come_from = come_from
+            self.previous_state = previous_state
             self.pos = self.get_position()
 
     def get_position(self):

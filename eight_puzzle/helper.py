@@ -19,7 +19,7 @@ def print_solution(initial_state, final_state):
     current_state = final_state
     while current_state.board != initial_state.board:
         path_to_solution.insert(0, current_state.board)
-        current_state = current_state.come_from
+        current_state = current_state.previous_state
     path_to_solution.insert(0, initial_state.board)
     for i, board in enumerate(path_to_solution):
         print(f"Step #{i+1}:")
