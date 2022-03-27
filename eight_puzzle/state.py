@@ -1,5 +1,5 @@
 from copy import deepcopy
-from helper import swap_elements, is_impossible_state
+from helpers import swap_elements, is_impossible_state
 
 
 class State:
@@ -46,3 +46,6 @@ class State:
             num = {"x": self.pos["x"], "y": self.pos["y"] + 1}
             return swap_elements(deepcopy(self.board), num, self.pos)
         return None
+
+    def __lt__(self, other):
+        return True
